@@ -1,0 +1,283 @@
+Program.Sub.ScreenSU.Start
+gui.F_Main..create
+gui.F_Main..caption("Ship To Browser")
+gui.F_Main..size(12585,6570)
+gui.F_Main..position(0,0)
+gui.F_Main..event(unload,f_main_unload)
+gui.F_Main..alwaysontop(False)
+gui.F_Main..fontname("Arial")
+gui.F_Main..fontsize(8)
+gui.F_Main..forecolor(0)
+gui.F_Main..fontstyle(,,,,)
+gui.F_Main..BackColor(-2147483633)
+gui.F_Main..controlbox(True)
+gui.F_Main..maxbutton(True)
+gui.F_Main..minbutton(True)
+gui.F_Main..mousepointer(0)
+gui.F_Main..moveable(True)
+gui.F_Main..sizeable(False)
+gui.F_Main..ShowInTaskBar(True)
+gui.F_Main..titlebar(True)
+gui.F_Main.frmFitler.create(frame)
+gui.F_Main.frmFitler.caption("Frame")
+gui.F_Main.frmFitler.size(11685,1290)
+gui.F_Main.frmFitler.position(200,215)
+gui.F_Main.frmFitler.visible(True)
+gui.F_Main.frmFitler.borderstyle(0)
+gui.F_Main.frmFitler.fontname("Arial")
+gui.F_Main.frmFitler.fontsize(8)
+gui.F_Main.dlCity.create(combobox)
+gui.F_Main.dlCity.text("")
+gui.F_Main.dlCity.visible(True)
+gui.F_Main.dlCity.size(2280,330)
+gui.F_Main.dlCity.zorder(0)
+gui.F_Main.dlCity.position(2585,205)
+gui.F_Main.dlCity.enabled(True)
+gui.F_Main.dlCity.parent("frmfitler")
+gui.F_Main.dlCity.fontname("Arial")
+gui.F_Main.dlCity.fontsize(8)
+gui.F_Main.lbl1.create(label,"City",True,645,240,1,2605,10,True,0,Arial,8,-2147483633,0)
+gui.F_Main.lbl1.parent("frmfitler")
+gui.F_Main.lbl3.create(label,"Address 5",True,1650,240,1,7645,585,True,0,Arial,8,-2147483633,0)
+gui.F_Main.lbl3.parent("frmfitler")
+gui.F_Main.lbl4.create(label,"Name",True,645,240,1,35,30,True,0,Arial,8,-2147483633,0)
+gui.F_Main.lbl4.parent("frmfitler")
+gui.F_Main.dlNames.create(combobox)
+gui.F_Main.dlNames.text("")
+gui.F_Main.dlNames.visible(True)
+gui.F_Main.dlNames.size(2550,330)
+gui.F_Main.dlNames.zorder(0)
+gui.F_Main.dlNames.position(15,205)
+gui.F_Main.dlNames.enabled(True)
+gui.F_Main.dlNames.parent("frmfitler")
+gui.F_Main.dlNames.fontname("Arial")
+gui.F_Main.dlNames.fontsize(8)
+gui.F_Main.cmdFilter.create(button)
+gui.F_Main.cmdFilter.caption("Filter")
+gui.F_Main.cmdFilter.visible(True)
+gui.F_Main.cmdFilter.size(855,300)
+gui.F_Main.cmdFilter.zorder(0)
+gui.F_Main.cmdFilter.position(9755,960)
+gui.F_Main.cmdFilter.enabled(True)
+gui.F_Main.cmdFilter.fontname("Arial")
+gui.F_Main.cmdFilter.fontsize(8)
+gui.F_Main.cmdFilter.event(click,cmdfilter_click)
+gui.F_Main.fgList.create(gsflexgrid)
+gui.F_Main.fgList.FixedRows(0)
+gui.F_Main.fgList.FixedCols(0)
+gui.F_Main.fgList.visible(True)
+gui.F_Main.fgList.size(12165,4230)
+gui.F_Main.fgList.zorder(0)
+gui.F_Main.fgList.position(130,1730)
+gui.F_Main.fgList.enabled(True)
+gui.F_Main.fgList.event(cellenter,fglist_dblclick)
+gui.F_Main.lbl5.create(label,"Address 2",True,1650,240,1,1945,595,True,0,Arial,8,-2147483633,0)
+gui.F_Main.lbl5.parent("frmfitler")
+gui.F_Main.lbl6.create(label,"Address 3",True,1650,240,1,3835,585,True,0,Arial,8,-2147483633,0)
+gui.F_Main.lbl6.parent("frmfitler")
+gui.F_Main.lbl7.create(label,"Address 1",True,1650,240,1,35,595,True,0,Arial,8,-2147483633,0)
+gui.F_Main.lbl7.parent("frmfitler")
+gui.F_Main.lbl8.create(label,"Address 4",True,1650,240,1,5760,590,True,0,Arial,8,-2147483633,0)
+gui.F_Main.lbl8.parent("frmfitler")
+gui.F_Main.txtAdd1.create(textbox,"",True,1875,300,0,25,780,True,0,Arial,8,-2147483643,1)
+gui.F_Main.txtAdd1.parent("frmfitler")
+gui.F_Main.txtAdd2.create(textbox,"",True,1875,300,0,1930,780,True,0,Arial,8,-2147483643,1)
+gui.F_Main.txtAdd2.parent("frmfitler")
+gui.F_Main.txtAdd3.create(textbox,"",True,1875,300,0,3830,765,True,0,Arial,8,-2147483643,1)
+gui.F_Main.txtAdd3.parent("frmfitler")
+gui.F_Main.txtAdd4.create(textbox,"",True,1875,300,0,5725,765,True,0,Arial,8,-2147483643,1)
+gui.F_Main.txtAdd4.parent("frmfitler")
+gui.F_Main.txtAdd5.create(textbox,"",True,1875,300,0,7615,760,True,0,Arial,8,-2147483643,1)
+gui.F_Main.txtAdd5.parent("frmfitler")
+gui.F_Main.dlNames.tabstop(True)
+gui.F_Main.dlNames.tabindex(1)
+gui.F_Main.dlCity.tabstop(True)
+gui.F_Main.dlCity.tabindex(2)
+gui.F_Main.txtAdd1.tabstop(True)
+gui.F_Main.txtAdd1.tabindex(3)
+gui.F_Main.txtAdd2.tabstop(True)
+gui.F_Main.txtAdd2.tabindex(4)
+gui.F_Main.txtAdd3.tabstop(True)
+gui.F_Main.txtAdd3.tabindex(5)
+gui.F_Main.txtAdd4.tabstop(True)
+gui.F_Main.txtAdd4.tabindex(6)
+gui.F_Main.txtAdd5.tabstop(True)
+gui.F_Main.txtAdd5.tabindex(7)
+gui.F_Main.cmdFilter.tabstop(True)
+gui.F_Main.cmdFilter.tabindex(8)
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Variable.Global.Customer.Declare(String)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'Hook 34500
+V.Local.squery.Declare(String)
+
+F.Intrinsic.Control.If(V.Passed.CALLING-PROGRAM.trim,<>,"ORD200")
+	F.Intrinsic.Control.end
+F.Intrinsic.Control.EndIf
+F.ODBC.Connection!con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.Ppass)
+V.Global.Customer.Set(V.Passed.CUSTOMER)
+
+Gui.F_Main.fgList.Cols(9)
+Gui.F_Main.fgList.Rows(700)
+Gui.F_Main.fgList.TextMatrix(0,0,"ID")
+
+Gui.F_Main.fgList.TextMatrix(1,0,"Name")
+
+Gui.F_Main.fgList.TextMatrix(2,0,"Address 1")
+Gui.F_Main.fgList.TextMatrix(3,0,"Address 2")
+Gui.F_Main.fgList.TextMatrix(4,0,"Address 3")
+Gui.F_Main.fgList.TextMatrix(5,0,"Address 4")
+Gui.F_Main.fgList.TextMatrix(6,0,"Address 5")
+Gui.F_Main.fgList.TextMatrix(7,0,"City")
+Gui.F_Main.fgList.TextMatrix(8,0,"Zip")
+Gui.F_Main.fgList.ColWidth(0,700)
+Gui.F_Main.fgList.ColWidth(1,1500)
+Gui.F_Main.fgList.ColWidth(2,1500)
+Gui.F_Main.fgList.ColWidth(3,1500)
+Gui.F_Main.fgList.ColWidth(4,1500)
+Gui.F_Main.fgList.ColWidth(5,1500)
+Gui.F_Main.fgList.ColWidth(6,1500)
+Gui.F_Main.fgList.ColWidth(7,1500)
+Gui.F_Main.fgList.ColWidth(8,800)
+Gui.F_Main.fgList.FixedCols(0)
+Gui.F_Main.fgList.FixedRows(1)
+Gui.F_Main.fgList.BuildStyle(1,0,"type","locked",True)
+Gui.F_Main.fgList.BuildStyle(1,0,"type","locked",True)
+Gui.F_Main.fgList.BuildStyle(1,2,"type","locked",True)
+Gui.F_Main.fgList.BuildStyle(1,3,"type","locked",True)
+Gui.F_Main.fgList.BuildStyle(1,4,"type","locked",True)
+Gui.F_Main.fgList.BuildStyle(1,5,"type","locked",True)
+Gui.F_Main.fgList.BuildStyle(1,6,"type","locked",True)
+Gui.F_Main.fgList.BuildStyle(1,7,"type","locked",True)
+Gui.F_Main.fgList.BuildStyle(1,8,"type","locked",True)
+
+
+F.Intrinsic.String.Concat("select CUSTOMER  from OE_MULTI_SHIP WHERE CUSTOMER = '",V.Global.Customer,"'",V.Local.squery)
+
+F.ODBC.Connection!con.OpenRecordsetRO("rst",V.Local.squery)
+
+F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,=,True)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndIf
+F.ODBC.con!rst.Close
+
+F.Intrinsic.Control.CallSub(Loaddl)
+Gui.F_Main..Show
+
+
+Program.Sub.Main.End
+
+program.sub.cmdfilter_click.start
+V.Local.sQuery.Declare(String)
+V.Local.sTags.Declare(String)
+V.Local.sFields.Declare(String)
+V.Local.sField.Declare(String)
+V.Local.sTag.Declare(String)
+V.Local.iX.Declare(String)
+V.Local.iRow.Declare(Long)
+V.Local.irows.Declare(Long)
+
+F.Intrinsic.String.Split("NAMES!CITY","!",V.local.stags)
+F.Intrinsic.String.Split("CUSTOMER_NAME!SHIP_CITY","!",V.local.sfields)
+Gui.F_Main.fgList.Visible(false)
+
+F.Intrinsic.String.Concat("select DISTINCT SHIP_SEQ, CUSTOMER_NAME, SHIP_ADDRESS1, SHIP_ADDRESS2,SHIP_ADDRESS3,SHIP_ADDRESS4,SHIP_ADDRESS5, SHIP_CITY, SHIP_STATE, SHIP_ZIP,SHIP_COUNTRY from OE_MULTI_SHIP WHERE CUSTOMER = '",V.Global.Customer,"' ",V.Local.squery)
+F.Intrinsic.UI.InvokeWaitDialog("Loading Grid")
+
+F.Intrinsic.Control.For(V.Local.iX,0,V.Local.sTags.UBound,1)
+	V.Local.sField.Set(V.Local.sFields(v.Local.iX))
+	V.Local.sTag.Set(V.Local.sTags(v.Local.iX))
+	F.Intrinsic.Control.If(V.Screen.F_Main!dl[v.local.stag].Text.trim,<>,"")
+		F.Intrinsic.String.Concat(V.local.squery," AND ",V.Local.sField," LIKE '%",V.Screen.F_Main!dl[v.local.stag].Text,"%'",V.Local.sQuery)
+	F.Intrinsic.Control.endif
+F.Intrinsic.Control.Next(V.Local.iX)
+F.Intrinsic.Control.For(V.Local.iX,1,5,1)
+	F.Intrinsic.String.Concat("SHIP_ADDRESS",V.Local.iX,V.Local.sField)
+	F.Intrinsic.Control.If(V.Screen.F_Main!txtadd[v.local.ix].Text.trim,<>,"")
+		F.Intrinsic.String.Concat(V.local.squery," AND ",V.Local.sField," LIKE '%",V.Screen.F_Main!txtadd[v.local.ix].Text,"%'",V.Local.sQuery)
+	F.Intrinsic.Control.endif
+F.Intrinsic.Control.Next(V.Local.iX)
+F.odbc.Connection!con.OpenRecordsetRO("rst",V.Local.sQuery)
+V.Local.iRow.Set(0)
+
+F.Intrinsic.Control.DoUntil(V.ODBC.con!rst.EOF,=,True)
+	F.Intrinsic.Math.Add(V.Local.iRow,1,V.Local.iRow)
+	Gui.F_Main.fgList.TextMatrix(0,V.Local.iRow,V.ODBC.con!rst.FieldValTrim!SHIP_SEQ)
+	Gui.F_Main.fgList.TextMatrix(1,V.Local.iRow,V.ODBC.con!rst.FieldValTrim!CUSTOMER_NAME)
+	Gui.F_Main.fgList.TextMatrix(2,V.Local.iRow,V.ODBC.con!rst.FieldValTrim!SHIP_ADDRESS1)
+	Gui.F_Main.fgList.TextMatrix(3,V.Local.iRow,V.ODBC.con!rst.FieldValTrim!SHIP_ADDRESS2)
+	Gui.F_Main.fgList.TextMatrix(4,V.Local.iRow,V.ODBC.con!rst.FieldValTrim!SHIP_ADDRESS3)
+	Gui.F_Main.fgList.TextMatrix(5,V.Local.iRow,V.ODBC.con!rst.FieldValTrim!SHIP_ADDRESS4)
+	Gui.F_Main.fgList.TextMatrix(6,V.Local.iRow,V.ODBC.con!rst.FieldValTrim!SHIP_ADDRESS5)
+	Gui.F_Main.fgList.TextMatrix(7,V.Local.iRow,V.ODBC.con!rst.FieldValTrim!SHIP_CITY)
+	Gui.F_Main.fgList.TextMatrix(7,V.Local.iRow,V.ODBC.con!rst.FieldValTrim!SHIP_ZIP)
+	Gui.F_Main.fgList.ApplyStyle(V.Local.iRow,1)
+	F.ODBC.con!rst.MoveNext
+F.Intrinsic.Control.loop
+Gui.F_Main.fgList.Visible(true)
+F.Intrinsic.UI.CloseWaitDialog
+
+F.ODBC.con!rst.Close
+
+
+program.sub.cmdfilter_click.end
+
+program.sub.f_main_unload.start
+F.Intrinsic.Control.End
+
+program.sub.f_main_unload.end
+
+program.sub.fglist_dblclick.start
+
+V.Local.sHold.Declare(String)
+
+Gui.F_Main.fgList.GetTextMatrix(0,V.args.key,V.Local.shold)
+V.Passed.SHIPTO-ID.Set(V.Local.sHold)
+F.Intrinsic.String.Concat(V.Global.Customer," ",V.Global.Customer)
+V.Passed.CUSTOMER.Set(V.global.Customer)
+V.Passed.777777.Set(1)
+F.Intrinsic.Control.End
+
+program.sub.fglist_dblclick.end
+
+Program.Sub.LoadDL.Start
+V.Local.squery.Declare(String)
+V.Local.sTags.Declare(String)
+V.Local.sFields.Declare(String)
+V.Local.sField.Declare(String)
+V.Local.sTag.Declare(String)
+V.Local.iX.Declare(String)
+
+F.Intrinsic.String.Split("NAMES!CITY","!",V.local.stags)
+F.Intrinsic.String.Split("CUSTOMER_NAME!SHIP_CITY","!",V.local.sfields)
+
+F.Intrinsic.Control.For(V.Local.iX,0,V.Local.sTags.UBound,1)
+	V.Local.sField.Set(V.Local.sFields(v.Local.iX))
+	F.Intrinsic.String.Concat("select  DISTINCT  ",V.Local.sFields(v.Local.iX)," from OE_MULTI_SHIP WHERE CUSTOMER = '",V.Global.Customer,"'  ORDER BY ",V.Local.sField,V.Local.squery)
+	F.ODBC.Connection!con.OpenRecordsetRO("rst",V.Local.squery)
+	F.Intrinsic.Control.DoUntil(V.ODBC.con!rst.EOF,=,True)
+		V.Local.sTag.Set(V.Local.sTags(v.Local.iX))
+		F.Intrinsic.Control.If(V.Local.sTag.Trim,<>,"")
+			F.Intrinsic.Control.If(V.ODBC.con!rst.FieldValtrim![v.local.sfield],<>,"")
+				Gui.F_Main.dl[V.Local.sTag].AddItem(V.ODBC.con!rst.FieldValTrim![v.local.sfield])
+			F.Intrinsic.Control.endif
+		F.Intrinsic.Control.endif
+		F.ODBC.con!rst.MoveNext
+	F.Intrinsic.Control.Loop
+	Gui.F_Main.dl[V.Local.sTag].AddItem(" ")
+	F.ODBC.con!rst.Close
+F.Intrinsic.Control.Next(V.Local.iX)
+
+Program.Sub.LoadDL.End
+
+Program.Sub.Comments.Start
+${$0$}$ATG_3674_Ship_To_Browser$}$RLK$}$4/1/2016
+Program.Sub.Comments.End
+
